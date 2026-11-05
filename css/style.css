@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    background-image: url(../images/bg.svg);
+    background-size: cover;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: #1e1e1e;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+}
+
+.highlight-text {
+  font-weight: bold;
+  font-size: 1rem; /* Змінюйте за потреби */
+  color: #ffffff;  /* Білий колір */
+  margin: 1em 0;
+}
+
+.nav__logo-img {
+    margin-right: 8px;
+}
+
+.nav__logo-text {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav__button {
+    display: flex;
+    height: 34px;
+    width: 108px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 17px;
+    background-color: #1c93e3;
+    transition: all .15s ease .15s;
+}
+
+.nav__button-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.case-highlight {
+    margin-top: 5px;
+    color: #FFD700;
+    font-weight: bold;
+    text-shadow: 0 0 1px #FFD700, 0 0 1px #FFA500;
+  }
+
+/* MAIN */
+main {
+  padding: 2px 16px 40px;
+}
+
+.main__body{
+    height: 620px;
+  position: relative;
+  margin: 16px auto;
+  padding: 64px 0;
+  max-width: 400px;
+  background: #1e1e1e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  transition: all .15s ease .15s;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex; 
+  justify-content: center;
+}
+
+.neon-text {
+  font-size: 2rem; /* Змінюйте розмір за необхідності */
+  color: #ffffff;
+  text-shadow: 
+    0 0 2px rgba(255, 255, 255, 0.1), 
+    0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+
+
+.main__img {
+  text-align: center;
+}
+
+.main__img-image {
+  width: 122px;
+  height: 122px;
+  border-radius: 61px;
+}
+
+.main__title {
+  font-size: 26px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 340px;
+  padding: 0 10px;
+  margin: 0 auto;
+  color: #fff;
+  margin: -5;
+  line-height: 0.9;
+}
+
+.main__description {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  margin: 10px 16px 0;
+  padding: 0;
+  color: #fff;
+  margin-bottom: -50px;
+
+}
+
+
+
+.main__button {
+    margin: 50px auto 0 auto;
+    display: flex;
+    height: 52px;
+    width: 164px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    transition: all .15s ease .15s;
+    animation: main__button linear 5s infinite;
+}
+
+
+@-webkit-keyframes bg-move {
+  0%   { background-position: -500px 0; }
+  100% { background-position: 1000px 0; }
+}
+@keyframes bg-move {
+  0%   { background-position: -500px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+
+
+button.tgme_action_button_new.shine {
+  display: block;       /* Щоб дозволити margin працювати */
+  margin: 0 auto;        /* Центрування по горизонталі */
+  height: 52px;
+  width: 164px;
+  border-radius: 22px;
+  background-color: #1c93e3;
+  background-image: linear-gradient(270deg, rgba(100, 181, 239, 0) 48.44%, #64b5ef 75.52%, rgba(100, 181, 239, 0) 100%);
+  background-repeat: no-repeat;
+  animation: bg-move linear 5s infinite;
+  font-size: 14px;
+  margin-top: -50px; /* 🔁 або 4px, 0px — зменшуй значення */
+}
+
+
+
+.main__button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+  <title>Telegram:Join Group Chat</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '831301789915154');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=831301789915154&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+<body>
+
+  <main class="main">
+
+    <div class="main__body">
+
+      <div class="main__img">
+        <img class="main__img-image" src="tjr.jpg" alt="">
+      </div>
+
+      <div class="main__title">
+       <p><strong>The Justice Report</strong> пояснює складне та розбирає кожну новину.</p>
+
+      </div>
+
+      <div class="main__description">
+          <br>
+Тебе тримають на гачку новин: страшний заголовок, клік, а всередині нічого нового, тільки тривога. TJR працює навпаки.
+<br><br>
+
+Підпишись і відчуй різницю.<br><br><br>
+      </div>
+
+      <div class="tgme_page_action main__button">
+        <button class="tgme_action_button_new shine" style="cursor: pointer;" onclick="handleTelegramButtonClick()">
+          Перейти в канал
+        </button>
+      </div>
+  <script>
+      function getCookie(name) {
+        var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+        return m ? decodeURIComponent(m[1]) : null;
+      }
+
+      function handleTelegramButtonClick() {
+        var payload = JSON.stringify({
+          url: window.location.href,
+          fbp: getCookie('_fbp'),
+          fbc: getCookie('_fbc')
+        });
+
+        // Надсилання події в Conversion API через Vercel Serverless Function
+        fetch('/api/send-event', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: payload,
+          keepalive: true
+        }).catch(function () {});
+
+        // Затримка, щоб запит встиг відправитись
+        setTimeout(function () {
+          window.location.href = 'https://t.me/+1dWy21yliNMyOTNi';
+        }, 300);
+      }
+  </script>
+    </div>
+
+  </main>
+
+</body>
+</html>
